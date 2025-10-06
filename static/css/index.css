@@ -38,6 +38,14 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.main-text {
+  /* Slightly tighter leading and explicit color for narrative paragraphs */
+  line-height: 1.4;
+  color: #000000;
+  margin-top: 1.5rem;
+  text-align: left;
+}
+
 
 /* Modern Button Styles */
 .button {
@@ -748,6 +756,5 @@ a:focus {
     box-shadow: none !important;
   }
 }
-
 
 

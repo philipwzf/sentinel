@@ -250,7 +250,7 @@
               <span class="author-block">
                 <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Yao Liu</a><sup>*</sup>,</span>
               <span class="author-block">
-                <a href="https://philipwang.github.io/" target="_blank">Philip Wang</a><sup>*</sup>,</span>
+                <a href="https://philipwzf.github.io/" target="_blank">Philip Wang</a><sup>*</sup>,</span>
               <span class="author-block">
                 <a href="FOURTH AUTHOR PERSONAL LINK" target="_blank">Zinan Wang</a>,</span>
               <span class="author-block">
@@ -402,7 +402,7 @@ and offering insights into their failure modes.
       <h2 class="title is-3">Semantic Level Safety</h2>
       <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
-          <p class="content has-text-justified" style="margin-top: 1.5rem;">
+          <p class="main-text">
             At the semantic level, we evaluate whether LLMs can correctly translate
             natural-language safety requirements into LTL-based formal semantics,
             providing the foundation for downstream action generation and evaluation.
@@ -413,7 +413,7 @@ and offering insights into their failure modes.
                  style="width: 100%; height: auto;">
             <!-- TODO: Optionally add a caption describing the semantic level safety results -->
             <h2 class="subtitle has-text-centered">
-              Semantic-level safety evaluation results in terms of overall performance and detailed requirements.
+              Semantic-level safety evaluation results.
             </h2>
           </figure>
         </div>
@@ -431,17 +431,21 @@ and offering insights into their failure modes.
       <h2 class="title is-3">Plan Level Safety</h2>
       <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
-          <figure>
-            <img src="static/images/sem-safety-results.png"
-                 alt="Semantic level safety evaluation results"
-                 style="width: 100%; height: auto;">
-            <!-- TODO: Optionally add a caption describing the semantic level safety results -->
-          </figure>
-          <p class="content has-text-justified" style="margin-top: 1.5rem;">
-            At the semantic level, we evaluate whether LLMs can correctly translate
-            natural-language safety requirements into LTL-based formal semantics,
-            providing the foundation for downstream action generation and evaluation.
+          <img src="static/images/sem-plan-pipeline.jpg"
+           alt="Semantic safety to Plan safety pipeline illustration"
+           style="width: 100%; height: auto;">
+          <p class="main-text">
+            Plan-level evaluation is important for determining whether such interpretations translate into safe planning. We evaluate LLM-generated high-level plan on a subset of VirtualHome tasks under three prompting strategies: (i) no explicit safety mention, (ii) natural-language safety guidance, and (iii) formal LTL safety prompts 
           </p>
+          <figure>
+            <img src="static/images/plan-safety-results.png"
+                 alt="Plan level safety evaluation results"
+                 style="width: 100%; height: auto;">
+            <!-- TODO: Optionally add a caption describing the plan level safety results -->
+            <h2 class="subtitle has-text-centered">
+              Plan-level safety evaluation results.
+            </h2>
+          </figure>
         </div>
       </div>
     </div>
