@@ -6,13 +6,13 @@
   
   <!-- Primary Meta Tags -->
   <!-- TODO: Replace with your paper title and author names -->
-  <meta name="title" content="PAPER_TITLE - AUTHOR_NAMES">
+  <meta name="title" content="SENTINEL: A Multi-Level Formal Framework for Safety Evaluation of LLM-based Embodied Agents - AUTHOR_NAMES">
   <!-- TODO: Write a compelling 150-160 character description of your research -->
   <meta name="description" content="BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS">
   <!-- TODO: Add 5-10 relevant keywords for your research area -->
   <meta name="keywords" content="KEYWORD1, KEYWORD2, KEYWORD3, machine learning, computer vision, AI">
   <!-- TODO: List all authors -->
-  <meta name="author" content="FIRST_AUTHOR_NAME, SECOND_AUTHOR_NAME">
+  <meta name="author" content="Simon Sinong Zhan, Yao Liu, Philip Wang, Zinan Wang, Qineng Wang, Zhian Ruan, Xiangyu Shi, Xinyu Cao, Frank Yang, Kangrui Wang, Huajie Shao, Manling Li, Qi Zhu">
   <meta name="robots" content="index, follow">
   <meta name="language" content="English">
   
@@ -21,7 +21,7 @@
   <!-- TODO: Replace with your institution or lab name -->
   <meta property="og:site_name" content="INSTITUTION_OR_LAB_NAME">
   <!-- TODO: Same as paper title above -->
-  <meta property="og:title" content="PAPER_TITLE">
+  <meta property="og:title" content="SENTINEL: A Multi-Level Formal Framework for Safety Evaluation of LLM-based Embodied Agents">
   <!-- TODO: Same as description above -->
   <meta property="og:description" content="BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS">
   <!-- TODO: Replace with your actual website URL -->
@@ -286,7 +286,7 @@
 
                   <!-- TODO: Replace with your GitHub repository URL -->
                   <span class="link-block">
-                    <a href="https://github.com/YOUR REPO HERE" target="_blank"
+                    <a href="https://github.com/philipwzf/safety-alfred/tree/master" target="_blank"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="fab fa-github"></i>
@@ -318,14 +318,26 @@
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <!-- TODO: Replace with your teaser video -->
-      <video poster="" id="tree" autoplay controls muted loop height="100%" preload="metadata">
-        <!-- TODO: Add your video file path here -->
-        <source src="static/videos/banner_video.mp4" type="video/mp4">
-      </video>
+      <!-- TODO: Replace with your teaser visual -->
+      <object data="static/images/framework_overview.pdf"
+              type="application/pdf"
+              aria-label="SENTINEL framework overview illustration"
+              style="width: 100%; min-height: 540px;">
+        <!-- Fallback for browsers without inline PDF support -->
+        <p>
+          View the teaser PDF
+          <a href="static/images/framework_overview.pdf">here</a>.
+        </p>
+      </object>
       <!-- TODO: Replace with your video description -->
       <h2 class="subtitle has-text-centered">
-        Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus. 
+        Multi-level, progressive formal safety evaluation pipeline of SENTINEL. The process
+begins with semantic-level evaluation, where intuitive natural language safety requirements are
+interpreted into formal safety semantics. These interpretations then guide plan-level generation
+of high-level action plans by LLM agents, which are verified through LTL checking. Finally, at
+the trajectory-level, physical execution trajectories are generated based on the action plans and
+simulated, and verified through CTL checking. At every level, evaluation is automated and grounded
+in temporal-logic–based safety semantics.
       </h2>
     </div>
   </div>
@@ -341,7 +353,23 @@
         <div class="content has-text-justified">
           <!-- TODO: Replace with your paper abstract -->
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper tellus sed ante aliquam tempus. Etiam porttitor urna feugiat nibh elementum, et tempor dolor mattis. Donec accumsan enim augue, a vulputate nisi sodales sit amet. Proin bibendum ex eget mauris cursus euismod nec et nibh. Maecenas ac gravida ante, nec cursus dui. Vivamus purus nibh, placerat ac purus eget, sagittis vestibulum metus. Sed vestibulum bibendum lectus gravida commodo. Pellentesque auctor leo vitae sagittis suscipit.
+            We present SENTINEL, the first framework for formally evaluating the physical
+safety of Large Language Model(LLM-based) embodied agents across the semantic, plan, and trajectory levels. Unlike prior methods that rely on heuristic rules or
+subjective LLM judgments, SENTINEL grounds practical safety requirements in
+formal temporal logic (TL) semantics that can precisely specify state invariants,
+temporal dependencies, and timing constraints. It then employs a multi-level verification pipeline where (i) at the semantic level, intuitive natural language safety
+requirements are formalized into TL formulas and the LLM agent’s understanding
+of these requirements is probed for alignment with the TL formulas; (ii) at the
+plan level, high-level action plans and subgoals generated by the LLM agent are
+verified against the TL formulas to detect unsafe plans before execution; and (iii) at
+the trajectory level, multiple execution trajectories are merged into a computation
+tree and efficiently verified against physically-detailed TL specifications for a final
+safety check. We apply SENTINEL in VirtualHome and ALFRED, and formally
+evaluate multiple LLM-based embodied agents against diverse safety requirements.
+Our experiments show that by grounding physical safety in temporal logic and
+applying verification methods across multiple levels, SENTINEL provides a rigorous foundation for systematically evaluating LLM-based embodied agents in
+physical environments, exposing safety violations overlooked by previous methods
+and offering insights into their failure modes.
           </p>
         </div>
       </div>
